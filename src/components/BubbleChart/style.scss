@@ -1,0 +1,53 @@
+.bubble-chart {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  padding-bottom: 75%;
+
+  vertical-align: top;
+  overflow: hidden;
+
+  &__svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__group {
+    transform: translate(50%, 50%);
+
+    &.bubble-chart__group_nr_1 {
+      fill: #d0d0d0;
+    }
+
+    &.bubble-chart__group_nr_2 {
+      fill: #e0e0e0;
+    }
+
+    &.bubble-chart__group_nr_3 {
+      fill: #f0f0f0;
+    }
+  }
+
+  &__bubble {
+    .bubble-chart__tooltip {
+      visibility: hidden;
+      fill: #222;
+    }
+
+    &:hover, &:active {
+      .bubble-chart__tooltip {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__bubble-circle {
+    fill: #3498db;
+    stroke: #2980b9;
+  }
+}
